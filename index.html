@@ -1,88 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Micelio 🖤</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Pirata+One&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Tailwind para utilidades de layout/espaciado más pulidas -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="components/beauty.css" />
-  <link rel="icon" href="components/media/lirio.png" />
-</head>
-<body>
-
-<!-- ═══════════════════════════════════════════════════════════════════
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this is for u 💌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Pirata+One&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind para utilidades de layout/espaciado más pulidas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="components/beauty.css" />
+    <link rel="icon" href="components/media/lirio.png" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════════════════════════
      ⚙  CONFIGURACIÓN — EDITA AQUÍ TUS CARTAS Y MÚSICA
      Solo modifica este bloque para personalizar el contenido.
 ═══════════════════════════════════════════════════════════════════ -->
-<script>
+    <script>
+      // ── 🎵 MÚSICA (playlist de YouTube, reproducción automática) ───────
+      // Agrega aquí los IDs de tus videos de YouTube (lo que va después de
+      // "v=" en la URL, ej: https://www.youtube.com/watch?v=ABC123 → "ABC123").
+      // Se reproducen en orden y en bucle, como una playlist.
+      const YT_PLAYLIST = [
+        "SlrxMRjY0zs", // ← reemplaza con tus propios IDs de YouTube
+        "Ar-X2XfW-LI",
+        "oIWBVRCLtwU",
+        "Ox_aMYJegQw",
+        "yHJ5VGCQ_0s",
+        "fd6uTBIS1Sg",
+        "dKVYuxTTmmA",
+        "dH7_By3Y2i0",
+        "xV9mqKWBqaw",
+        "7KrNh9YaeDg",
+        "Mcj75l2gJcY",
+        "heBRegOcpVw",
+        "Q7IVjcgfYRg",
+        "SvwmRTgL20U",
+        "HOQqFXtFVxM",
+        "iOT_zuDHvVk",
+        "kLdiCRDfceg",
+        "lSSi6bN5BNs",
+        "NaZXwYjal8E",
+        "JO6ohrBcYpU",
+        "wBWK06E3oxw",
+        "JoFkQ7iAQcw",
+        "9hxzmqpnGb0",
+        "DTcKkcyS410",
+      ];
 
-  // ── 🎵 MÚSICA (playlist de YouTube, reproducción automática) ───────
-  // Agrega aquí los IDs de tus videos de YouTube (lo que va después de
-  // "v=" en la URL, ej: https://www.youtube.com/watch?v=ABC123 → "ABC123").
-  // Se reproducen en orden y en bucle, como una playlist.
-  const YT_PLAYLIST = [
-    "SlrxMRjY0zs",   // ← reemplaza con tus propios IDs de YouTube
-    "Ar-X2XfW-LI",
-    "oIWBVRCLtwU",
-    "Ox_aMYJegQw",
-    "yHJ5VGCQ_0s",
-    "fd6uTBIS1Sg",
-    "dKVYuxTTmmA",
-    "dH7_By3Y2i0",
-    "xV9mqKWBqaw",
-    
-  ];
+      // ── 🏍️ NUESTRO CAMINO — línea de tiempo ───────────────────────────
+      // Fecha de inicio del camino (formato "YYYY-MM-DD").
+      const CAMINO_INICIO = "2026-03-19 13:48";
+      // Fecha del primer encuentro en persona (formato "YYYY-MM-DD").
+      const PRIMER_ENCUENTRO = "2026-04-28 08:45";
+      // Fecha del jam de Spotify (primer momento "propio" de los dos).
+      const SPOTIFY_JAM = "2026-04-02 22:37";
+      // Fecha de nuestra primera llamada.
+      const PRIMERA_LLAMADA = "2026-04-13 11:28";
+      // Agrega, elimina o edita los eventos importantes de tu historia.
+      // "fecha" en formato "YYYY-MM-DD". El texto se mostrará al
+      // seleccionar cada punto del camino.
+      const EVENTOS = [
+        {
+          fecha: "2026-03-19",
+          titulo: "El día que tomé la decisión de hablarte",
+          texto:
+            "Todo comenzó aquí. Un día cualquiera que, sin saberlo, se convirtió en el inicio de algo que cambiaría el rumbo de ambos.",
+        },
+        {
+          fecha: "2026-04-02",
+          titulo: "Nuestra primera interacción intima a pesar de no conocernos",
+          texto:
+            "El día en el que tu propusiste la grandiosa de conectarnos a pesar de la distancia con un jam en spotify, la mejor idea que se te pudo haber ocurrido, gracias por eso <3, fue el primer momento en el que sentí que había algo especial entre nosotros, y no me equivoqué.",
+        },
+        {
+          fecha: "2026-04-12",
+          titulo: "Nuestra primera conversación larga",
+          texto:
+            "Las pocas horas que pasaron en aquella llamada sin que nos diéramos cuenta. Ahí entendí que quería seguir hablando contigo siempre.",
+        },
+        {
+          fecha: "2026-04-28",
+          titulo: "El primer día que decidimos conocernos en persona",
+          texto:
+            "El día que por fin nos vimos en persona. La emoción, los nervios, y esa sensación de que algo especial estaba comenzando a tomar forma, además las ganas de un beso no se nos escapó para ese día, tampoco las risas faltaron, siendo el día que marcó un antes y después para nuestras vidas. Después de haber compartido tantos momentos juntos en chat, llegó un día que se volvió inolvidable por ser el día de nuestras primeras veces, el primer beso, la primera vez que nos abrazamos tan fuerte que parecía que no queríamos soltarnos, la primera vez que dijimos 'te quiero' y sentimos que esas palabras tenían un peso y una verdad tan grande como el universo mismo. Ese día quedó grabado en mi memoria como uno de los días más especiales de mi vida, porque fue el día en el que nuestras almas se conectaron de una manera tan profunda que supe que quería seguir explorando esa conexión contigo para siempre.",
+        },
+        {
+          fecha: "2026-05-01",
+          titulo: "Llegaste tú y mi casa se sintió más como un hogar",
+          texto:
+            "3 días después de habernos visto por primera vez, decidiste venir a mi casa, nerviosa por primera vez coger un bus sola, que aunque te llevaste una muy mala experiencia, te recibí con los brazos abiertos, todo como si vivieramos juntos y vinieramos de una larga jornada, te esperé con muchos nervios pero fue algo que sintió diferente, como si hubiera esperado por ese momento y te preparé una comida que al parecer te encantó siendo algo que me inspiré en hacerlo, además de que por primera vez nos comimos a besos por demasiado tiempo con una primera mordida de labio incluida que luego se convertiría en un vicio para ti. Ese día marcó un momento donde la intimidad empezó a crecer entre nosotros, y no solo hablo de la intimidad física, sino también de la emocional, el poder compartir un espacio tan personal como mi casa contigo, me hizo sentir que quería compartir cada vez más momentos así contigo, y que cada vez que te veo, mi casa se siente más como un hogar, porque tú eres parte fundamental de ese sentimiento de hogar para mí. Mi casita <3",
+        },
+        {
+          fecha: "2026-05-12",
+          titulo: "El día que las primeras veces son inolvidables",
+          texto:
+            "Era la segunda vez que venías a mi casa, pero era la primera vez que me movía tanto para verte, además la primera vez que daba un ramo de flores tan bonito y que tu misma lo presenciaras, la primera vez que te llevé en una moto (aunque algo destartalada mecánicamente), la primera vez que cociné algo diferente, la primera vez que nos quedamos viendonos mientras cocinamos además de darnos varios besos mientras estabamos pendientes de que no se quemara al comida, la primera vez que me pediste que hiciera algo para ti aunque siendo una propuesta un poco indecente (andabas ovulando ajajsa) y que disfrutaste, aunque después de tanto disfrute se nos dió el tiempo de irnos pero teníamos contratiempo como la lluvia y las personas alrededor intentando que no nos pillarán, aún así te llevé y tomaste el bus, pero me pegué un pequeño accidente que me quedó algo marcado, y tú llegabas re tarde a tu casa, pero a pesar de todo eso, ese día se volvió inolvidable por todas las primeras veces que vivimos juntos, y aunque hubo momentos de estrés y nerviosismo, lo que más recuerdo es la sensación de felicidad y conexión que sentí contigo durante todo el día, y cómo cada momento compartido contigo se volvió un recuerdo precioso que guardo con mucho cariño en mi corazón.",
+        },
+        {
+          fecha: "2026-05-20",
+          titulo: "La adrenalina nos consumía",
+          texto:
+            "El viaje que emprendí para ir a escaparme a tu casa, fue un día increíble que se volvió una aventura llena de emociones, desde la emoción de planear el viaje, hasta la adrenalina de estar en la carretera, y la felicidad de verte de nuevo después de tanto tiempo. A pesar de los nervios que a veces sentí durante el viaje, sentía una sensación de alivio por cómo cada kilómetro recorrido me acercaba más a ti. Ese día se volvió inolvidable por la mezcla de emociones que experimenté, y por cómo cada momento compartido contigo durante esa noche se volvió un recuerdo precioso, el como el nerviosismo de entrar a tu casa fue algo con mucha adrenalina.",
+        },
+        {
+          fecha: "2026-05-21",
+          titulo: "Noche y día son lo mismo para nosotros ",
+          texto:
+            "Esa misma noche pudimos enchufarnos mutuamente, sentir una nueva experiencia que se nos dió con las ganas que tuvimos guardadas por las anteriores veces que nos vimos, donde el mismo agua se nos quedaba corto del líquido que nuestros cuerpos soltaron solo por estar juntos, además de un sueño muy corto pero lindo al hacer contacto piel con piel acurrucaditos, la salida de tu casa fue un momento de demasiada adrenalina, no se me quitó el nerviosismo por demasiado tiempo, y comimos un rico migao aunque no lo hayas podido disfrutar de la misma manera que yo, de ahí partimos a un lugar para descansar, que lo hicimos por un rato aunque pasó algo que generó disgusto, pero que al final se solucionó, y después pasamos a seguir disfrutando.Respecto a este título, las ganas que nos tuvimos ese día no importó la hora, solo importó gozarnos mutuamente. ",
+        },
+        {
+          fecha: "2026-06-02",
+          titulo: "El día que las ganas nos pudieron sin más",
+          texto:
+            "Ese día el plan fue algo distinto, decidimos ir a las panaderías locales de mierdito, pero solo comimos en una y examinamos baratillos, para luego ir a mi casa sudados pero haciendo el almuerzo, aunque con un detalle, unas botellas de vodka green apple, estuvimos prendidos por un momento, pero no hizo efecto, aunque después almorzar consumimos más y de ahí nuestros cuerpos empezaron a expresarse de una manera distinta, el gusto por el cuerpo de ambos se expresó en unas cantidades distintas, y el sudor que emanabamos ese día fue increíble, aunque a la final lloraste por un desatine que no fue de tu agrado, e intenté consolarte y nos acucurramos aunque se acoloró la situación luego, aunque nos dejamos llevar y se nos pasó el tiempo, y aunque estuvimos ansiosos por la no llegada del bus, llegó una persona a salvarnos y fue algo que agradecimos bastante.",
+        },
+        {
+          fecha: "2026-06-10",
+          titulo: "Un día donde nuestros cuerpos hablaron por sí solos",
+          texto:
+            "Hicimos un plan algo diferente, conectamos nuestros cuerpos de una manera distinta, con más alcohol encima, en pocas palabras y sin ser explícitos, nuestros cuerpos fueron hechos para encariñarse y rasguñarse de manera mutua, demostrando las garras y el deseo por ambas partes, y luego darme cuenta de que el hambre por ambos de mantiene genuino y el hambre en nuestros cuerpos también predominó de una manera increíble. El dolor de nuestros cuerpos demostró demasiado el deseo que nos tenemos, además la conexión que estuvimos forjando anteriormente se fue construyendo aún más.",
+        },
+        {
+          fecha: new Date().toLocaleDateString("en-CA", {
+            timeZone: "America/Bogota",
+          }), // siempre es hoy
+          titulo: "Hoy",
+          texto:
+            "Y aquí seguimos, en este punto del camino, escribiendo juntos lo que viene.",
+        },
+      ];
 
-  // ── 🏍️ NUESTRO CAMINO — línea de tiempo ───────────────────────────
-  // Fecha de inicio del camino (formato "YYYY-MM-DD").
-  const CAMINO_INICIO = "2026-03-19 13:48";
-  // Fecha del primer encuentro en persona (formato "YYYY-MM-DD").
-  const PRIMER_ENCUENTRO = "2026-04-28 08:45";
-  // Fecha del jam de Spotify (primer momento "propio" de los dos).
-  const SPOTIFY_JAM = "2026-04-02 22:37";
-  // Fecha de nuestra primera llamada.
-  const PRIMERA_LLAMADA = "2026-04-13 11:28";
-  // Agrega, elimina o edita los eventos importantes de tu historia.
-  // "fecha" en formato "YYYY-MM-DD". El texto se mostrará al
-  // seleccionar cada punto del camino.
-  const EVENTOS = [
-    {
-      fecha:  "2026-03-19",
-      titulo: "El día que nos conocimos",
-      texto:  "Todo comenzó aquí. Un día cualquiera que, sin saberlo, se convirtió en el inicio de algo que cambiaría todo."
-    },
-    {
-      fecha:  "2026-04-12",
-      titulo: "Nuestra primera conversación larga",
-      texto:  "Las horas pasaron sin que nos diéramos cuenta. Ahí entendí que quería seguir hablando contigo siempre."
-    },
-    {
-      fecha:  "2026-05-10",
-      titulo: "Un momento especial",
-      texto:  "Edita este punto con la fecha y la historia de ese momento que quieras recordar para siempre."
-    },
-    {
-      fecha:  "2026-06-15",
-      titulo: "Hoy",
-      texto:  "Y aquí seguimos, en este punto del camino, escribiendo juntos lo que viene."
-    }
-  ];
-
-  // ── 💌 CARTAS ─────────────────────────────────────────────────────
-  // Agrega, elimina o edita cartas aquí.
-  // Campos: label (etiqueta), titulo, contenido, firma, sello (emoji)
-  const CARTAS = [
-    {
-      label:     "Carta I",
-      titulo:    "Para ti, Sol",
-      sello:     "❖",
-      contenido: `Hay personas que llegan a tu vida y la pintan de colores que jamás pensaste que existían. Tú eres una de esas personas, un color distinto y llamativo difícil de encontrar en este mundo tan repetitivo.
+      // ── 💌 CARTAS ─────────────────────────────────────────────────────
+      // Agrega, elimina o edita cartas aquí.
+      // Campos: label (etiqueta), titulo, contenido, firma, sello (emoji)
+      const CARTAS = [
+        {
+          label: "Carta I",
+          titulo: "Para ti",
+          sello: "☀︎",
+          contenido: `Hay personas que llegan a tu vida y la pintan de colores que jamás pensaste que existían. Tú eres una de esas personas, un color distinto y llamativo difícil de encontrar en este mundo tan repetitivo.
 
 Desde el primer momento en que te ví, me pareció ver a una persona tan linda, pero algo dentro mí supo que algo especial ocurría, algo que mi mente no podía explicar, pero que mi intuición sentía que era importante. Al parecer acertó, con toda la fé quise tirar un comentario que inicialmente no era para coquetear pero a la final la intención y el diálogo se prestó para ser un coqueteo mutuo, fue recíproco el atractivo por ambos, y no me arrepiento de absolutamente nada, es más estoy completamente agradecido al respecto. 
 
@@ -93,508 +153,619 @@ Quiero que sepas que cada momento contigo vale más que mil palabras y momentos 
 Esta carta es solo un pequeño intento de decirte lo que mi corazón guarda con tanto cuidado.
 
 Gracias por ser exactamente quien eres, mostrandote sin pena ni juzgamiento.`,
-      firma:     "Con todo el cariño que mi corazón posee hacia ti"
-    },
-    {
-      label:     "Carta II",
-      titulo:    "Lo que admiro de ti",
-      sello:     "✦",
-      contenido: `Admiro tu valentía cuando enfrentas el mundo con una sonrisa, incluso en los días más difíciles. Admiro cómo te preocupas por las personas que quieres, cómo das sin esperar nada a cambio.
+          firma: "Con todo el cariño que mi corazón posee hacia ti",
+        },
+        {
+          label: "Carta II",
+          titulo: "Lo que admiro de ti",
+          sello: "✦",
+          contenido: `Admiro tu valentía cuando enfrentas el mundo con una sonrisa, incluso en los días más difíciles. Admiro cómo te preocupas por las personas que quieres, cómo das sin esperar nada a cambio.
 
 Admiro tu forma de ver la belleza en las cosas pequeñas: un atardecer, una canción, una flor. Me has enseñado a mirar la vida con otros ojos.
 
 Eres mucho más de lo que crees. Mucho más de lo que las palabras pueden describir. Pero aún así lo intento, porque mereces saberlo.`,
-      firma:     "Siempre, con amor"
-    },
-    {
-      label:     "Carta III",
-      titulo:    "Lo que te prometo",
-      sello:     "𔓘",
-      contenido: `Te prometo estar cuando el mundo se ponga gris. Te prometo escucharte, no solo oírte. Te prometo que nunca tendrás que caminar sola mientras yo esté aquí.
+          firma: "Siempre, con amor",
+        },
+        {
+          label: "Carta III",
+          titulo: "Lo que te prometo",
+          sello: "𔓘",
+          contenido: `Te prometo estar cuando el mundo se ponga gris. Te prometo escucharte, no solo oírte. Te prometo que nunca tendrás que caminar sola mientras yo esté aquí.
 
 No son promesas vacías. Son palabras que nacen desde el lugar más sincero de mi corazón, ese lugar que guardas tú sin saberlo.
 
 Esta carta es mi forma de decirte: cuento contigo, y espero que tú cuentes conmigo.`,
-      firma:     "Tuyo, siempre"
-    },
-    {
-      label:     "Carta IV",
-      titulo:    "Los días grises",
-      sello:     "♛",
-      contenido: `Hay días en los que todo pesa más de la cuenta. Días grises, silenciosos, donde hasta respirar parece costar trabajo.
+          firma: "Tuyo, siempre",
+        },
+        {
+          label: "Carta IV",
+          titulo: "Los días grises",
+          sello: "ཐི༏ཋྀ",
+          contenido: `Hay días en los que todo pesa más de la cuenta. Días grises, silenciosos, donde hasta respirar parece costar trabajo.
 
 Quiero que sepas que en esos días también pienso en ti. Que no necesitas estar bien todo el tiempo para merecer cariño. Que está bien caer, mientras alguien esté ahí para ayudarte a levantarte.
 
 Ese alguien quiero ser yo.`,
-      firma:     "Aquí, siempre"
-    },
-    {
-      label:     "Carta V",
-      titulo:    "Pequeños momentos",
-      sello:     "✧",
-      contenido: `No hacen falta grandes gestos. A veces basta una conversación a media noche, una canción compartida, una risa que no se puede contener.
+          firma: "Aquí, siempre",
+        },
+        {
+          label: "Carta V",
+          titulo: "Pequeños momentos",
+          sello: "✧",
+          contenido: `No hacen falta grandes gestos. A veces basta una conversación a media noche, una canción compartida, una risa que no se puede contener.
 
 Esos pequeños momentos son los que más atesoro. Son los que construyen, sin que nos demos cuenta, algo mucho más grande.
 
 Gracias por cada uno de ellos.`,
-      firma:     "Con cariño"
-    },
-    {
-      label:     "Carta VI",
-      titulo:    "Lo que viene",
-      sello:     "❀",
-      contenido: `No sé qué nos depare el futuro, pero sí sé que quiero estar presente para verlo contigo. Para celebrar tus logros, acompañarte en tus retos, y seguir construyendo esta historia que estamos escribiendo.
+          firma: "Con cariño",
+        },
+        {
+          label: "Carta VI",
+          titulo: "Lo que viene",
+          sello: "✿",
+          contenido: `No sé qué nos depare el futuro, pero sí sé que quiero estar presente para verlo contigo. Para celebrar tus logros, acompañarte en tus retos, y seguir construyendo esta historia que estamos escribiendo.
 
 Esta es apenas una de muchas cartas que espero poder escribirte. Que esta sea solo el comienzo.`,
-      firma:     "Con todo mi corazón"
-    }
-  ];
+          firma: "Con todo mi corazón",
+        },
+      ];
+    </script>
 
-</script>
-
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      PERSONAJES DE FONDO
      — Reemplaza estas rutas con tus PNG de fondo transparente:
        /images/hello-kitty.png  y  /images/cinnamoroll.png
        Las animaciones de flotación ya están aplicadas (clases p1 / p2)
 ═══════════════════════════════════════════════════════════════════ -->
-<div class="fondo-personajes" aria-hidden="true">
+    <div class="fondo-personajes" aria-hidden="true">
+      <img
+        class="personaje-img p1"
+        src="components/media/darkhellokitty.png"
+        alt=""
+      />
+      <img
+        class="personaje-img p2"
+        src="components/media/cinnamonroll.webp"
+        alt=""
+      />
 
-  <img class="personaje-img p1" src="components/media/darkhellokitty.png" alt="" />
-  <img class="personaje-img p2" src="components/media/cinnamonroll.webp" alt="" />
+      <!-- Rosa gótica decorativa — superior izquierda -->
+      <svg
+        class="personaje-svg p3"
+        viewBox="0 0 150 150"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M75,140 Q60,90 75,40"
+          stroke="#3a1a22"
+          stroke-width="4"
+          fill="none"
+        />
+        <path
+          d="M75,100 Q50,90 55,75"
+          stroke="#3a1a22"
+          stroke-width="3"
+          fill="#4f2230"
+        />
+        <circle cx="75" cy="40" r="26" fill="#7a2742" />
+        <circle cx="75" cy="40" r="17" fill="#9c3454" />
+        <circle cx="75" cy="40" r="9" fill="#B0123F" />
+        <ellipse
+          cx="55"
+          cy="28"
+          rx="14"
+          ry="20"
+          fill="#2a0f18"
+          transform="rotate(-30,55,28)"
+        />
+        <ellipse
+          cx="95"
+          cy="28"
+          rx="14"
+          ry="20"
+          fill="#2a0f18"
+          transform="rotate(30,95,28)"
+        />
+      </svg>
 
-  <!-- Rosa gótica decorativa — superior izquierda -->
-  <svg class="personaje-svg p3" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-    <path d="M75,140 Q60,90 75,40" stroke="#3a1a22" stroke-width="4" fill="none"/>
-    <path d="M75,100 Q50,90 55,75" stroke="#3a1a22" stroke-width="3" fill="#4f2230"/>
-    <circle cx="75" cy="40" r="26" fill="#7a2742"/>
-    <circle cx="75" cy="40" r="17" fill="#9c3454"/>
-    <circle cx="75" cy="40" r="9"  fill="#B0123F"/>
-    <ellipse cx="55" cy="28" rx="14" ry="20" fill="#2a0f18" transform="rotate(-30,55,28)"/>
-    <ellipse cx="95" cy="28" rx="14" ry="20" fill="#2a0f18" transform="rotate(30,95,28)"/>
-  </svg>
+      <!-- Murciélago gótico — superior derecha -->
+      <svg
+        class="personaje-svg p4"
+        viewBox="0 0 200 120"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M100,60 C70,10 10,10 0,40 C30,40 55,55 70,75 C40,70 15,85 10,105 C45,100 80,85 100,60 Z"
+          fill="#15080c"
+        />
+        <path
+          d="M100,60 C130,10 190,10 200,40 C170,40 145,55 130,75 C160,70 185,85 190,105 C155,100 120,85 100,60 Z"
+          fill="#15080c"
+        />
+        <circle cx="92" cy="58" r="3" fill="#E91E8C" />
+        <circle cx="108" cy="58" r="3" fill="#E91E8C" />
+      </svg>
+    </div>
+    <!-- /fondo-personajes -->
 
-  <!-- Murciélago gótico — superior derecha -->
-  <svg class="personaje-svg p4" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-    <path d="M100,60 C70,10 10,10 0,40 C30,40 55,55 70,75 C40,70 15,85 10,105 C45,100 80,85 100,60 Z" fill="#15080c"/>
-    <path d="M100,60 C130,10 190,10 200,40 C170,40 145,55 130,75 C160,70 185,85 190,105 C155,100 120,85 100,60 Z" fill="#15080c"/>
-    <circle cx="92" cy="58" r="3" fill="#E91E8C"/>
-    <circle cx="108" cy="58" r="3" fill="#E91E8C"/>
-  </svg>
-
-</div>
-<!-- /fondo-personajes -->
-
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      REPRODUCTOR DE MÚSICA
 ═══════════════════════════════════════════════════════════════════ -->
-<div class="music-player">
-  <span class="music-label" id="musicLabel">♪ Playlist</span>
-  <button class="music-btn" id="musicBtn" title="Activar / silenciar música" aria-label="Activar música">
-    ▶
-  </button>
-</div>
-<!-- Reproductor de YouTube oculto, usado solo como fuente de audio -->
-<div id="ytPlayer" style="position:fixed; bottom:0; left:0; width:2px; height:2px; opacity:0; pointer-events:none;"></div>
+    <div class="music-player">
+      <span class="music-label" id="musicLabel">♪ Playlist</span>
+      <button
+        class="music-btn"
+        id="musicBtn"
+        title="Activar / silenciar música"
+        aria-label="Activar música"
+      >
+        ▶
+      </button>
+    </div>
+    <!-- Reproductor de YouTube oculto, usado solo como fuente de audio -->
+    <div
+      id="ytPlayer"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        opacity: 0;
+        pointer-events: none;
+      "
+    ></div>
 
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      1:11 — NUMEROLOGÍA
 ═══════════════════════════════════════════════════════════════════ -->
-<section class="seccion-numerologia">
-  <p class="hora-111">1:11</p>
-  <span class="numerologia-label">numerología del amor</span>
-  <p class="numerologia-texto">
-    Ver 1:11 es considerado una señal de sincronía: el universo abriendo una
-    puerta hacia nuevos comienzos. En el amor, esta hora habla de almas que
-    vibran en la misma frecuencia, de pensamientos que se cruzan al mismo
-    tiempo sin planearlo, y de una invitación a manifestar, con el corazón
-    abierto, todo lo que se desea construir junto a esa persona.
-  </p>
-</section>
+    <section class="seccion-numerologia">
+      <p class="hora-111">1:11</p>
+      <span class="numerologia-label">numerología del amor</span>
+      <p class="numerologia-texto">
+        Ver 1:11 es considerado una señal de sincronía: el universo abriendo una
+        puerta hacia nuevos comienzos. En el amor, esta hora habla de almas que
+        vibran en la misma frecuencia, de pensamientos que se cruzan al mismo
+        tiempo sin planearlo, y de una invitación a manifestar, con el corazón
+        abierto, todo lo que se desea construir junto a esa persona.
+      </p>
+    </section>
 
-<div class="divisor" aria-hidden="true">✦ ❖ ✦</div>
+    <div class="divisor" aria-hidden="true">✦ ❖ ✦</div>
 
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      HEADER
 ═══════════════════════════════════════════════════════════════════ -->
-<header class="header-section">
-  <span class="ornamento ornamento-top">✦ ✦ ✦</span>
-  <h1 class="titulo-principal">Sol, la causante de mis sueños despiertos, noches de insomnio y momentos de ensoñación absoluta te mostraré algo a continuación </h1>
-  <span class="ornamento ornamento-bot">— ❖ —</span>
-</header>
+    <header class="header-section">
+      <span class="ornamento ornamento-top">✦ ✦ ✦</span>
+      <h1 class="titulo-principal">
+        Sol, la causante de mis sueños despiertos, noches de insomnio y momentos
+        de ensoñación absoluta te mostraré algo a continuación
+      </h1>
+      <span class="ornamento ornamento-bot">— ❖ —</span>
+    </header>
 
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      CARRUSEL DE CARTAS
 ═══════════════════════════════════════════════════════════════════ -->
-<section class="seccion-cartas">
-  <p class="subtitulo-seccion">desliza para leer cada carta</p>
+    <section class="seccion-cartas">
+      <p class="subtitulo-seccion">desliza para leer cada carta</p>
 
-  <div class="carrusel-wrap">
-    <button class="car-btn" id="btnPrev" aria-label="Carta anterior">‹</button>
+      <div class="carrusel-wrap">
+        <button class="car-btn" id="btnPrev" aria-label="Carta anterior">
+          ‹
+        </button>
 
-    <div class="carrusel" id="carrusel">
-      <div class="carrusel-track" id="track">
-        <!-- Las cartas se generan dinámicamente -->
+        <div class="carrusel" id="carrusel">
+          <div class="carrusel-track" id="track">
+            <!-- Las cartas se generan dinámicamente -->
+          </div>
+        </div>
+
+        <button class="car-btn" id="btnNext" aria-label="Carta siguiente">
+          ›
+        </button>
       </div>
-    </div>
 
-    <button class="car-btn" id="btnNext" aria-label="Carta siguiente">›</button>
-  </div>
+      <div class="car-dots" id="carDots"></div>
+    </section>
 
-  <div class="car-dots" id="carDots"></div>
-</section>
+    <div class="divisor" aria-hidden="true">❀ ✦ ❀</div>
 
-<div class="divisor" aria-hidden="true">❀ ✦ ❀</div>
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      NUESTRO CAMINO — línea de tiempo con moto
      — Reemplaza images/moto-bmw-s1000r.png con tu imagen de la moto
 ═══════════════════════════════════════════════════════════════════ -->
-<section class="seccion-camino">
-  <p class="camino-titulo">Nuestro camino</p>
-  <p class="camino-subtitulo">19 de marzo de 2026 — hoy</p>
+    <section class="seccion-camino">
+      <p class="camino-titulo">Nuestro camino</p>
+      <p class="camino-subtitulo">19 de marzo de 2026 — hoy</p>
 
-  <div class="camino-wrap" id="caminoWrap">
-    <div class="camino-linea"></div>
-    <img class="camino-moto" src="components/media/s1000r.png" alt="Moto BMW S1000R" />
-    <!-- los puntos del camino se generan dinámicamente -->
-  </div>
+      <div class="camino-wrap" id="caminoWrap">
+        <div class="camino-linea"></div>
+        <img
+          class="camino-moto"
+          src="components/media/yamahar6.png"
+          alt="Moto Yamaha R6"
+        />
+        <!-- los puntos del camino se generan dinámicamente -->
+      </div>
 
-  <div class="camino-detalle" id="caminoDetalle">
-    <p class="camino-detalle-fecha" id="caminoDetalleFecha"></p>
-    <p class="camino-detalle-titulo" id="caminoDetalleTitulo"></p>
-    <p class="camino-detalle-texto" id="caminoDetalleTexto"></p>
-  </div>
-</section>
+      <div class="camino-detalle" id="caminoDetalle">
+        <p class="camino-detalle-fecha" id="caminoDetalleFecha"></p>
+        <p class="camino-detalle-titulo" id="caminoDetalleTitulo"></p>
+        <p class="camino-detalle-texto" id="caminoDetalleTexto"></p>
+      </div>
+    </section>
 
+    <div class="divisor" aria-hidden="true">⏳ ❖ ⏳</div>
 
-<div class="divisor" aria-hidden="true">⏳ ❖ ⏳</div>
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      CONTADORES
 ═══════════════════════════════════════════════════════════════════ -->
-<p class="contadores-titulo">Contando cada segundo</p>
-<p class="contadores-subtitulo">desde los momentos que marcaron nuestra historia</p>
+    <p class="contadores-titulo">Contando cada segundo</p>
+    <p class="contadores-subtitulo">
+      desde los momentos que marcaron nuestra historia
+    </p>
 
-<section class="seccion-contadores">
-  <div class="contador-card">
-    <p class="contador-titulo">Hablando desde</p>
-    <p class="contador-fecha" id="contadorHablandoFecha"></p>
-    <div class="contador-grid" id="contadorHablando"></div>
-  </div>
-  <div class="contador-card">
-    <p class="contador-titulo">Desde que nos vimos en persona</p>
-    <p class="contador-fecha" id="contadorEncuentroFecha"></p>
-    <div class="contador-grid" id="contadorEncuentro"></div>
-  </div>
-  <div class="contador-card">
-    <p class="contador-titulo">Desde el jam de Spotify</p>
-    <p class="contador-fecha" id="contadorJamFecha"></p>
-    <div class="contador-grid" id="contadorJam"></div>
-  </div>
-  <div class="contador-card">
-    <p class="contador-titulo">Desde nuestra primera llamada</p>
-    <p class="contador-fecha" id="contadorLlamadaFecha"></p>
-    <div class="contador-grid" id="contadorLlamada"></div>
-  </div>
+    <section class="seccion-contadores">
+      <div class="contador-card">
+        <p class="contador-titulo">Hablando desde</p>
+        <p class="contador-fecha" id="contadorHablandoFecha"></p>
+        <div class="contador-grid" id="contadorHablando"></div>
+      </div>
+      <div class="contador-card">
+        <p class="contador-titulo">Desde que nos vimos en persona</p>
+        <p class="contador-fecha" id="contadorEncuentroFecha"></p>
+        <div class="contador-grid" id="contadorEncuentro"></div>
+      </div>
+      <div class="contador-card">
+        <p class="contador-titulo">Desde el jam de Spotify</p>
+        <p class="contador-fecha" id="contadorJamFecha"></p>
+        <div class="contador-grid" id="contadorJam"></div>
+      </div>
+      <div class="contador-card">
+        <p class="contador-titulo">Desde nuestra primera llamada</p>
+        <p class="contador-fecha" id="contadorLlamadaFecha"></p>
+        <div class="contador-grid" id="contadorLlamada"></div>
+      </div>
 
-  <!-- Contador misterioso: aún sin fecha, solo signos de interrogación -->
-  <div class="contador-card contador-misterio">
-    <p class="contador-titulo">¿Qué viene después?</p>
-    <p class="contador-fecha">fecha por escribir…</p>
-    <div class="contador-grid">
-      <div class="contador-unidad"><span class="contador-num">?</span><span class="contador-unidad-label">días</span></div>
-      <div class="contador-unidad"><span class="contador-num">??</span><span class="contador-unidad-label">horas</span></div>
-      <div class="contador-unidad"><span class="contador-num">???</span><span class="contador-unidad-label">min</span></div>
-      <div class="contador-unidad"><span class="contador-num">????</span><span class="contador-unidad-label">seg</span></div>
-    </div>
-  </div>
-</section>
+      <!-- Contador misterioso: aún sin fecha, solo signos de interrogación -->
+      <div class="contador-card contador-misterio">
+        <p class="contador-titulo">¿Qué viene después?</p>
+        <p class="contador-fecha">Lo descubrirás luego ...</p>
+        <div class="contador-grid">
+          <div class="contador-unidad">
+            <span class="contador-num">?</span
+            ><span class="contador-unidad-label">días</span>
+          </div>
+          <div class="contador-unidad">
+            <span class="contador-num">??</span
+            ><span class="contador-unidad-label">horas</span>
+          </div>
+          <div class="contador-unidad">
+            <span class="contador-num">???</span
+            ><span class="contador-unidad-label">min</span>
+          </div>
+          <div class="contador-unidad">
+            <span class="contador-num">????</span
+            ><span class="contador-unidad-label">seg</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="divisor" aria-hidden="true">❖ ✦ ❖</div>
+    <div class="divisor" aria-hidden="true">❖ ✦ ❖</div>
 
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════════════════════════ -->
-<footer class="footer">
-  <span class="footer-ornamento">❀ ✦ ❖ ✦ ❀</span>
-  <p class="footer-frase">hecho con todo mi corazón, para ti</p>
-  <span class="footer-firma">— el sol de nuestro micelio —</span>
+    <footer class="footer">
+      <span class="footer-ornamento">❀ ✦ ❖ ✦ ❀</span>
+      <p class="footer-frase">
+        hecho con cada pensamiento, corazón y alma, para ti
+      </p>
+      <span class="footer-firma">— tú enamorado del código ♡ —</span>
 
-  <div class="footer-juego">
-    <p class="footer-juego-titulo">Mini juego: atrapa soles y corazones</p>
-    <p class="footer-juego-desc">haz clic en cada ☀ y ❤ antes de que desaparezcan</p>
-    <p class="footer-juego-score">Puntos: <span id="juegoScore">0</span></p>
-    <div class="footer-juego-area" id="juegoArea"></div>
-    <button class="footer-juego-btn" id="juegoBtn" type="button">jugar</button>
-    <p class="footer-juego-mensaje" id="juegoMensaje"></p>
-  </div>
+      <div class="footer-juego">
+        <p class="footer-juego-titulo">Mini juego: atrapa soles y corazones</p>
+        <p class="footer-juego-desc">
+          haz clic en cada ☀ y ❤ antes de que desaparezcan
+        </p>
+        <p class="footer-juego-score">Puntos: <span id="juegoScore">0</span></p>
+        <div class="footer-juego-area" id="juegoArea"></div>
+        <button class="footer-juego-btn" id="juegoBtn" type="button">
+          jugar
+        </button>
+        <p class="footer-juego-mensaje" id="juegoMensaje"></p>
+      </div>
 
-  <p class="footer-credito">hecho para ti</p>
-</footer>
+      <p class="footer-credito">hecho personalmente para ti</p>
+    </footer>
 
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      MODAL — carta completa
 ═══════════════════════════════════════════════════════════════════ -->
-<div class="modal-overlay oculto" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
-  <div class="modal-carta">
-    <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar carta">✕</button>
-    <p class="modal-ornamento-top">✦ ✦ ✦</p>
-    <h2 class="modal-titulo" id="modalTitulo"></h2>
-    <p class="modal-separador">— ❖ —</p>
-    <div class="modal-cuerpo" id="modalCuerpo"></div>
-    <div class="modal-firma" id="modalFirma"></div>
-  </div>
-</div>
+    <div
+      class="modal-overlay oculto"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitulo"
+    >
+      <div class="modal-carta">
+        <button class="modal-cerrar" id="modalCerrar" aria-label="Cerrar carta">
+          ✕
+        </button>
+        <p class="modal-ornamento-top">✦ ✦ ✦</p>
+        <h2 class="modal-titulo" id="modalTitulo"></h2>
+        <p class="modal-separador">— ❖ —</p>
+        <div class="modal-cuerpo" id="modalCuerpo"></div>
+        <div class="modal-firma" id="modalFirma"></div>
+      </div>
+    </div>
 
-
-<!-- ═══════════════════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════════════════
      JAVASCRIPT
 ═══════════════════════════════════════════════════════════════════ -->
-<script>
-  /* ────────────────────────────────────────────────────────────────
+    <script>
+      /* ────────────────────────────────────────────────────────────────
      GENERACIÓN DEL CARRUSEL
   ──────────────────────────────────────────────────────────────── */
-  const track     = document.getElementById('track');
-  const carrusel  = document.getElementById('carrusel');
-  const dotsWrap  = document.getElementById('carDots');
-  const btnPrev   = document.getElementById('btnPrev');
-  const btnNext   = document.getElementById('btnNext');
+      const track = document.getElementById("track");
+      const carrusel = document.getElementById("carrusel");
+      const dotsWrap = document.getElementById("carDots");
+      const btnPrev = document.getElementById("btnPrev");
+      const btnNext = document.getElementById("btnNext");
 
-  const GAP = window.innerWidth <= 640 ? 19.2 : 40; // debe coincidir con el gap del CSS (en px, 1.2rem / 2.5rem)
+      const GAP = window.innerWidth <= 640 ? 19.2 : 40; // debe coincidir con el gap del CSS (en px, 1.2rem / 2.5rem)
 
-  let activeIndex = 0;
+      let activeIndex = 0;
 
-  CARTAS.forEach((carta, i) => {
-    const slide = document.createElement('div');
-    slide.className = 'carta-slide';
-    slide.dataset.index = i;
-    slide.innerHTML = `
+      CARTAS.forEach((carta, i) => {
+        const slide = document.createElement("div");
+        slide.className = "carta-slide";
+        slide.dataset.index = i;
+        slide.innerHTML = `
       <div class="sobre-cuerpo"></div>
       <div class="sobre-solapa"></div>
-      <div class="sobre-sello">${carta.sello || '❖'}</div>
+      <div class="sobre-sello">${carta.sello || "❖"}</div>
       <p class="carta-label">${carta.label}</p>
       <p class="carta-titulo">${carta.titulo}</p>
       <span class="carta-cta">→ abrir carta</span>
     `;
-    track.appendChild(slide);
+        track.appendChild(slide);
 
-    // Punto indicador
-    const dot = document.createElement('div');
-    dot.className = 'car-dot';
-    dot.addEventListener('click', () => irA(i));
-    dotsWrap.appendChild(dot);
+        // Punto indicador
+        const dot = document.createElement("div");
+        dot.className = "car-dot";
+        dot.addEventListener("click", () => irA(i));
+        dotsWrap.appendChild(dot);
 
-    slide.addEventListener('click', () => {
-      if (i === activeIndex) {
-        abrirModal(i);
-      } else {
-        irA(i);
+        slide.addEventListener("click", () => {
+          if (i === activeIndex) {
+            abrirModal(i);
+          } else {
+            irA(i);
+          }
+        });
+      });
+
+      const slides = Array.from(track.children);
+      const dots = Array.from(dotsWrap.children);
+
+      function irA(index) {
+        activeIndex = Math.max(0, Math.min(CARTAS.length - 1, index));
+        actualizarCarrusel();
       }
-    });
-  });
 
-  const slides = Array.from(track.children);
-  const dots   = Array.from(dotsWrap.children);
+      function actualizarCarrusel() {
+        const wrapWidth = carrusel.clientWidth;
+        const cardWidth =
+          slides[activeIndex].getBoundingClientRect().width / getScale(0);
+        // calcular el desplazamiento acumulado hasta la carta activa
+        let offset = 0;
+        for (let i = 0; i < activeIndex; i++) {
+          offset += getBaseWidth(slides[i]) + GAP;
+        }
+        const centerOffset =
+          (wrapWidth - getBaseWidth(slides[activeIndex])) / 2;
+        track.style.transform = `translateX(${centerOffset - offset}px)`;
 
-  function irA(index) {
-    activeIndex = Math.max(0, Math.min(CARTAS.length - 1, index));
-    actualizarCarrusel();
-  }
+        slides.forEach((slide, i) => {
+          slide.classList.remove("activa", "adyacente");
+          const dist = Math.abs(i - activeIndex);
+          if (dist === 0) slide.classList.add("activa");
+          else if (dist === 1) slide.classList.add("adyacente");
+        });
 
-  function actualizarCarrusel() {
-    const wrapWidth  = carrusel.clientWidth;
-    const cardWidth  = slides[activeIndex].getBoundingClientRect().width / getScale(0);
-    // calcular el desplazamiento acumulado hasta la carta activa
-    let offset = 0;
-    for (let i = 0; i < activeIndex; i++) {
-      offset += getBaseWidth(slides[i]) + GAP;
-    }
-    const centerOffset = (wrapWidth - getBaseWidth(slides[activeIndex])) / 2;
-    track.style.transform = `translateX(${centerOffset - offset}px)`;
+        dots.forEach((dot, i) =>
+          dot.classList.toggle("activo", i === activeIndex),
+        );
+      }
 
-    slides.forEach((slide, i) => {
-      slide.classList.remove('activa', 'adyacente');
-      const dist = Math.abs(i - activeIndex);
-      if (dist === 0) slide.classList.add('activa');
-      else if (dist === 1) slide.classList.add('adyacente');
-    });
+      // ancho "base" (sin escala) de una carta, leído de su flex-basis
+      function getBaseWidth(slide) {
+        return window.innerWidth <= 640 ? 220 : 280;
+      }
+      function getScale() {
+        return 1;
+      }
 
-    dots.forEach((dot, i) => dot.classList.toggle('activo', i === activeIndex));
-  }
+      btnPrev.addEventListener("click", () => irA(activeIndex - 1));
+      btnNext.addEventListener("click", () => irA(activeIndex + 1));
 
-  // ancho "base" (sin escala) de una carta, leído de su flex-basis
-  function getBaseWidth(slide) {
-    return window.innerWidth <= 640 ? 220 : 280;
-  }
-  function getScale() { return 1; }
+      document.addEventListener("keydown", (e) => {
+        if (modalOverlay.classList.contains("oculto")) {
+          if (e.key === "ArrowLeft") irA(activeIndex - 1);
+          if (e.key === "ArrowRight") irA(activeIndex + 1);
+        }
+      });
 
-  btnPrev.addEventListener('click', () => irA(activeIndex - 1));
-  btnNext.addEventListener('click', () => irA(activeIndex + 1));
-
-  document.addEventListener('keydown', (e) => {
-    if (modalOverlay.classList.contains('oculto')) {
-      if (e.key === 'ArrowLeft')  irA(activeIndex - 1);
-      if (e.key === 'ArrowRight') irA(activeIndex + 1);
-    }
-  });
-
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      ARRASTRAR / DESLIZAR (mouse + touch)
   ──────────────────────────────────────────────────────────────── */
-  let arrastrando = false;
-  let inicioX = 0;
+      let arrastrando = false;
+      let inicioX = 0;
 
-  function inicioArrastre(x) {
-    arrastrando = true;
-    inicioX = x;
-    track.classList.add('arrastrando');
-  }
-  function finArrastre(x) {
-    if (!arrastrando) return;
-    arrastrando = false;
-    track.classList.remove('arrastrando');
-    const delta = x - inicioX;
-    const umbral = 50;
-    if (delta > umbral)       irA(activeIndex - 1);
-    else if (delta < -umbral) irA(activeIndex + 1);
-    else actualizarCarrusel();
-  }
+      function inicioArrastre(x) {
+        arrastrando = true;
+        inicioX = x;
+        track.classList.add("arrastrando");
+      }
+      function finArrastre(x) {
+        if (!arrastrando) return;
+        arrastrando = false;
+        track.classList.remove("arrastrando");
+        const delta = x - inicioX;
+        const umbral = 50;
+        if (delta > umbral) irA(activeIndex - 1);
+        else if (delta < -umbral) irA(activeIndex + 1);
+        else actualizarCarrusel();
+      }
 
-  track.addEventListener('mousedown', (e) => inicioArrastre(e.clientX));
-  window.addEventListener('mouseup',  (e) => finArrastre(e.clientX));
-  track.addEventListener('touchstart', (e) => inicioArrastre(e.touches[0].clientX), { passive: true });
-  track.addEventListener('touchend',   (e) => finArrastre(e.changedTouches[0].clientX));
+      track.addEventListener("mousedown", (e) => inicioArrastre(e.clientX));
+      window.addEventListener("mouseup", (e) => finArrastre(e.clientX));
+      track.addEventListener(
+        "touchstart",
+        (e) => inicioArrastre(e.touches[0].clientX),
+        { passive: true },
+      );
+      track.addEventListener("touchend", (e) =>
+        finArrastre(e.changedTouches[0].clientX),
+      );
 
-  window.addEventListener('resize', actualizarCarrusel);
+      window.addEventListener("resize", actualizarCarrusel);
 
-  // Posición inicial
-  actualizarCarrusel();
+      // Posición inicial
+      actualizarCarrusel();
 
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      MODAL
   ──────────────────────────────────────────────────────────────── */
-  const modalOverlay = document.getElementById('modalOverlay');
-  const modalCerrar  = document.getElementById('modalCerrar');
+      const modalOverlay = document.getElementById("modalOverlay");
+      const modalCerrar = document.getElementById("modalCerrar");
 
-  function abrirModal(index) {
-    const c = CARTAS[index];
-    document.getElementById('modalTitulo').textContent = c.titulo;
-    document.getElementById('modalCuerpo').textContent = c.contenido;
-    document.getElementById('modalFirma').textContent  = c.firma;
-    modalOverlay.classList.remove('oculto');
-    document.body.style.overflow = 'hidden';
-  }
-  function cerrarModal() {
-    modalOverlay.classList.add('oculto');
-    document.body.style.overflow = '';
-  }
-  modalCerrar.addEventListener('click', cerrarModal);
-  modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) cerrarModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarModal(); });
+      function abrirModal(index) {
+        const c = CARTAS[index];
+        document.getElementById("modalTitulo").textContent = c.titulo;
+        document.getElementById("modalCuerpo").textContent = c.contenido;
+        document.getElementById("modalFirma").textContent = c.firma;
+        modalOverlay.classList.remove("oculto");
+        document.body.style.overflow = "hidden";
+      }
+      function cerrarModal() {
+        modalOverlay.classList.add("oculto");
+        document.body.style.overflow = "";
+      }
+      modalCerrar.addEventListener("click", cerrarModal);
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) cerrarModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") cerrarModal();
+      });
 
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      MÚSICA — playlist de YouTube con reproducción automática
   ──────────────────────────────────────────────────────────────── */
-  const musicBtn    = document.getElementById('musicBtn');
-  const musicLabel  = document.getElementById('musicLabel');
-  let   ytPlayer    = null;
-  let   ytReady     = false;
-  let   sonidoActivo = false;
+      const musicBtn = document.getElementById("musicBtn");
+      const musicLabel = document.getElementById("musicLabel");
+      let ytPlayer = null;
+      let ytReady = false;
+      let sonidoActivo = false;
 
-  // La API de YouTube llama a esta función global cuando está lista
-  window.onYouTubeIframeAPIReady = function () {
-    ytPlayer = new YT.Player('ytPlayer', {
-      height: '2',
-      width: '2',
-      playerVars: {
-        listType:   'playlist',
-        playlist:   YT_PLAYLIST.join(','),
-        autoplay:   1,
-        loop:       1,
-        mute:       1,      // los navegadores exigen "mute" para autoplay
-        controls:   0,
-        playsinline: 1
-      },
-      events: {
-        onReady: (e) => {
-          ytReady = true;
-          e.target.playVideo();
+      // La API de YouTube llama a esta función global cuando está lista
+      window.onYouTubeIframeAPIReady = function () {
+        ytPlayer = new YT.Player("ytPlayer", {
+          height: "2",
+          width: "2",
+          playerVars: {
+            listType: "playlist",
+            playlist: YT_PLAYLIST.join(","),
+            autoplay: 1,
+            loop: 1,
+            mute: 1, // los navegadores exigen "mute" para autoplay
+            controls: 0,
+            playsinline: 1,
+          },
+          events: {
+            onReady: (e) => {
+              ytReady = true;
+              e.target.playVideo();
+            },
+          },
+        });
+      };
+
+      // Carga el script de la API de YouTube
+      (function cargarYouTubeAPI() {
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+      })();
+
+      musicBtn.addEventListener("click", () => {
+        if (!ytReady || !ytPlayer) return;
+        if (sonidoActivo) {
+          ytPlayer.mute();
+          musicBtn.textContent = "▶";
+          musicLabel.textContent = "♪ Playlist";
+          sonidoActivo = false;
+        } else {
+          ytPlayer.unMute();
+          ytPlayer.playVideo();
+          musicBtn.textContent = "⏸";
+          musicLabel.textContent = "♪ Sonando…";
+          sonidoActivo = true;
         }
-      }
-    });
-  };
+      });
 
-  // Carga el script de la API de YouTube
-  (function cargarYouTubeAPI() {
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.head.appendChild(tag);
-  })();
-
-  musicBtn.addEventListener('click', () => {
-    if (!ytReady || !ytPlayer) return;
-    if (sonidoActivo) {
-      ytPlayer.mute();
-      musicBtn.textContent = '▶';
-      musicLabel.textContent = '♪ Playlist';
-      sonidoActivo = false;
-    } else {
-      ytPlayer.unMute();
-      ytPlayer.playVideo();
-      musicBtn.textContent = '⏸';
-      musicLabel.textContent = '♪ Sonando…';
-      sonidoActivo = true;
-    }
-  });
-
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      NUESTRO CAMINO — línea de tiempo con moto
   ──────────────────────────────────────────────────────────────── */
-  const caminoWrap   = document.getElementById('caminoWrap');
-  const caminoMoto   = caminoWrap.querySelector('.camino-moto');
-  const caminoDet    = document.getElementById('caminoDetalle');
-  const caminoFecha  = document.getElementById('caminoDetalleFecha');
-  const caminoTitulo = document.getElementById('caminoDetalleTitulo');
-  const caminoTexto  = document.getElementById('caminoDetalleTexto');
+      const caminoWrap = document.getElementById("caminoWrap");
+      const caminoMoto = caminoWrap.querySelector(".camino-moto");
+      const caminoDet = document.getElementById("caminoDetalle");
+      const caminoFecha = document.getElementById("caminoDetalleFecha");
+      const caminoTitulo = document.getElementById("caminoDetalleTitulo");
+      const caminoTexto = document.getElementById("caminoDetalleTexto");
 
-  function formatearFecha(d) {
-    return d.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
+      function formatearFecha(d) {
+        return d.toLocaleDateString("es-ES", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+      }
 
-    // Acepta fechas en formato "YYYY-MM-DD" o "YYYY-MM-DD HH:MM" (24h).
-  // Si no se indica hora, se usa la medianoche (00:00).
-  function parseFecha(str) {
-    const partes = String(str).trim().split(' ');
-    const fecha  = partes[0];
-    const hora   = partes[1] || '00:00';
-    return new Date(`${fecha}T${hora}:00`);
-  }
+      // Acepta fechas en formato "YYYY-MM-DD" o "YYYY-MM-DD HH:MM" (24h).
+      // Si no se indica hora, se usa la medianoche (00:00).
+      function parseFecha(str) {
+        const partes = String(str).trim().split(" ");
+        const fecha = partes[0];
+        const hora = partes[1] || "00:00";
+        return new Date(`${fecha}T${hora}:00`);
+      }
 
- (function construirCamino() {
-    const inicio  = parseFecha(CAMINO_INICIO);
-    const hoy     = new Date();
-    const totalMs = Math.max(1, hoy - inicio);
-    let activo    = null;
-    let pctMoto   = 96; // posición "de reposo" de la moto (hoy)
- 
-    EVENTOS.forEach((ev, i) => {
-      const fecha = parseFecha(ev.fecha);
-      let pct = ((fecha - inicio) / totalMs) * 100;
-      pct = Math.max(2, Math.min(96, pct));
-      pctMoto = Math.max(pctMoto, pct);
+      (function construirCamino() {
+        const inicio = parseFecha(CAMINO_INICIO);
+        const hoy = new Date();
+        const totalMs = Math.max(1, hoy - inicio);
+        let activo = null;
+        let pctMoto = 96; // posición "de reposo" de la moto (hoy)
 
-      const punto = document.createElement('div');
-      // Se distribuyen en 4 niveles (arriba/abajo, cerca/lejos) para
-      // que los puntos no se encimen aunque agregues muchos más.
-      punto.className = 'punto-camino nivel-' + (i % 4);
-      punto.style.left = pct + '%';
-      punto.innerHTML = `
+        EVENTOS.forEach((ev, i) => {
+          const fecha = parseFecha(ev.fecha);
+          let pct = ((fecha - inicio) / totalMs) * 100;
+          pct = Math.max(2, Math.min(96, pct));
+          pctMoto = Math.max(pctMoto, pct);
+
+          const punto = document.createElement("div");
+          // Se distribuyen en 4 niveles (arriba/abajo, cerca/lejos) para
+          // que los puntos no se encimen aunque agregues muchos más.
+          punto.className = "punto-camino nivel-" + (i % 4);
+          punto.style.left = pct + "%";
+          punto.innerHTML = `
         <span class="punto-dot" style="animation-delay:${i * 0.08}s"></span>
         <span class="punto-texto">
           <span class="punto-fecha">${formatearFecha(fecha)}</span>
@@ -602,137 +773,151 @@ Esta es apenas una de muchas cartas que espero poder escribirte. Que esta sea so
         </span>
       `;
 
-      punto.addEventListener('click', () => {
-        const yaActivo = punto.classList.contains('activo');
-        document.querySelectorAll('.punto-camino').forEach(p => p.classList.remove('activo'));
+          punto.addEventListener("click", () => {
+            const yaActivo = punto.classList.contains("activo");
+            document
+              .querySelectorAll(".punto-camino")
+              .forEach((p) => p.classList.remove("activo"));
 
-        if (yaActivo) {
-          caminoDet.classList.remove('visible');
-          caminoMoto.style.left = pctMoto + '%';
-          activo = null;
-          return;
-        }
+            if (yaActivo) {
+              caminoDet.classList.remove("visible");
+              caminoMoto.style.left = pctMoto + "%";
+              activo = null;
+              return;
+            }
 
-        punto.classList.add('activo');
-        caminoFecha.textContent  = formatearFecha(fecha);
-        caminoTitulo.textContent = ev.titulo;
-        caminoTexto.textContent  = ev.texto;
-        caminoDet.classList.add('visible');
-        caminoMoto.style.left = pct + '%';
-        activo = i;
-      });
+            punto.classList.add("activo");
+            caminoFecha.textContent = formatearFecha(fecha);
+            caminoTitulo.textContent = ev.titulo;
+            caminoTexto.textContent = ev.texto;
+            caminoDet.classList.add("visible");
+            caminoMoto.style.left = pct + "%";
+            activo = i;
+          });
 
-      caminoWrap.appendChild(punto);
-    });
+          caminoWrap.appendChild(punto);
+        });
 
-    caminoMoto.style.left = pctMoto + '%';
-  })();
+        caminoMoto.style.left = pctMoto + "%";
+      })();
 
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      CONTADORES — días, horas, minutos y segundos
   ──────────────────────────────────────────────────────────────── */
-  function crearContador(containerId, fechaLabelId, fechaInicioStr) {
-    const inicio = parseFecha(fechaInicioStr);
-    document.getElementById(fechaLabelId).textContent = formatearFecha(inicio);
+      function crearContador(containerId, fechaLabelId, fechaInicioStr) {
+        const inicio = parseFecha(fechaInicioStr);
+        document.getElementById(fechaLabelId).textContent =
+          formatearFecha(inicio);
 
-    const cont = document.getElementById(containerId);
-    cont.innerHTML = `
+        const cont = document.getElementById(containerId);
+        cont.innerHTML = `
       <div class="contador-unidad"><span class="contador-num" data-u="d">0</span><span class="contador-unidad-label">días</span></div>
       <div class="contador-unidad"><span class="contador-num" data-u="h">00</span><span class="contador-unidad-label">horas</span></div>
       <div class="contador-unidad"><span class="contador-num" data-u="m">00</span><span class="contador-unidad-label">min</span></div>
       <div class="contador-unidad"><span class="contador-num" data-u="s">00</span><span class="contador-unidad-label">seg</span></div>
     `;
-    const dEl = cont.querySelector('[data-u="d"]');
-    const hEl = cont.querySelector('[data-u="h"]');
-    const mEl = cont.querySelector('[data-u="m"]');
-    const sEl = cont.querySelector('[data-u="s"]');
+        const dEl = cont.querySelector('[data-u="d"]');
+        const hEl = cont.querySelector('[data-u="h"]');
+        const mEl = cont.querySelector('[data-u="m"]');
+        const sEl = cont.querySelector('[data-u="s"]');
 
-    function tick() {
-      const diffSeg = Math.max(0, Math.floor((Date.now() - inicio.getTime()) / 1000));
-      dEl.textContent = Math.floor(diffSeg / 86400);
-      hEl.textContent = String(Math.floor((diffSeg % 86400) / 3600)).padStart(2, '0');
-      mEl.textContent = String(Math.floor((diffSeg % 3600) / 60)).padStart(2, '0');
-      sEl.textContent = String(diffSeg % 60).padStart(2, '0');
-    }
-    tick();
-    setInterval(tick, 1000);
-  }
+        function tick() {
+          const diffSeg = Math.max(
+            0,
+            Math.floor((Date.now() - inicio.getTime()) / 1000),
+          );
+          dEl.textContent = Math.floor(diffSeg / 86400);
+          hEl.textContent = String(
+            Math.floor((diffSeg % 86400) / 3600),
+          ).padStart(2, "0");
+          mEl.textContent = String(Math.floor((diffSeg % 3600) / 60)).padStart(
+            2,
+            "0",
+          );
+          sEl.textContent = String(diffSeg % 60).padStart(2, "0");
+        }
+        tick();
+        setInterval(tick, 1000);
+      }
 
-  // "CAMINO_INICIO" = el primer día que empezamos a hablar
-  crearContador('contadorHablando',  'contadorHablandoFecha',  CAMINO_INICIO);
-  // "PRIMER_ENCUENTRO" = el primer día que nos vimos en persona
-  crearContador('contadorEncuentro', 'contadorEncuentroFecha', PRIMER_ENCUENTRO);
-  // "SPOTIFY_JAM" = el primer jam de Spotify, nuestro
-  crearContador('contadorJam',       'contadorJamFecha',       SPOTIFY_JAM);
-  // "PRIMERA_LLAMADA" = nuestra primera llamada
-  crearContador('contadorLlamada',   'contadorLlamadaFecha',   PRIMERA_LLAMADA);
+      // "CAMINO_INICIO" = el primer día que empezamos a hablar
+      crearContador("contadorHablando", "contadorHablandoFecha", CAMINO_INICIO);
+      // "PRIMER_ENCUENTRO" = el primer día que nos vimos en persona
+      crearContador(
+        "contadorEncuentro",
+        "contadorEncuentroFecha",
+        PRIMER_ENCUENTRO,
+      );
+      // "SPOTIFY_JAM" = el primer jam de Spotify, nuestro
+      crearContador("contadorJam", "contadorJamFecha", SPOTIFY_JAM);
+      // "PRIMERA_LLAMADA" = nuestra primera llamada
+      crearContador("contadorLlamada", "contadorLlamadaFecha", PRIMERA_LLAMADA);
 
-  /* ────────────────────────────────────────────────────────────────
+      /* ────────────────────────────────────────────────────────────────
      MINI JUEGO — atrapa soles y corazones
   ──────────────────────────────────────────────────────────────── */
-  (function juegoFooter() {
-    const area    = document.getElementById('juegoArea');
-    const scoreEl = document.getElementById('juegoScore');
-    const btn     = document.getElementById('juegoBtn');
-    const msg     = document.getElementById('juegoMensaje');
-    const ICONOS  = ['☀', '❤'];
-    const DURACION_MS = 15000;
-    const APARICION_MS = 650;
-    const VIDA_ITEM_MS = 1400;
+      (function juegoFooter() {
+        const area = document.getElementById("juegoArea");
+        const scoreEl = document.getElementById("juegoScore");
+        const btn = document.getElementById("juegoBtn");
+        const msg = document.getElementById("juegoMensaje");
+        const ICONOS = ["☀", "❤"];
+        const DURACION_MS = 30000;
+        const APARICION_MS = 650;
+        const VIDA_ITEM_MS = 1400;
 
-    let score  = 0;
-    let activo = false;
-    let spawnTimer, endTimer;
+        let score = 0;
+        let activo = false;
+        let spawnTimer, endTimer;
 
-    function spawn() {
-      const item = document.createElement('button');
-      item.className = 'juego-item';
-      item.type = 'button';
-      const esCorazon = Math.random() < 0.5;
-      item.textContent = esCorazon ? '❤' : '☀';
-      item.style.color = esCorazon ? 'var(--acento)' : '#FFD24A';
+        function spawn() {
+          const item = document.createElement("button");
+          item.className = "juego-item";
+          item.type = "button";
+          const esCorazon = Math.random() < 0.5;
+          item.textContent = esCorazon ? "❤" : "☀";
+          item.style.color = esCorazon ? "var(--acento)" : "#FFD24A";
 
-      const maxX = Math.max(0, area.clientWidth  - 38);
-      const maxY = Math.max(0, area.clientHeight - 38);
-      item.style.left = (Math.random() * maxX) + 'px';
-      item.style.top  = (Math.random() * maxY) + 'px';
+          const maxX = Math.max(0, area.clientWidth - 38);
+          const maxY = Math.max(0, area.clientHeight - 38);
+          item.style.left = Math.random() * maxX + "px";
+          item.style.top = Math.random() * maxY + "px";
 
-      const vida = setTimeout(() => item.remove(), VIDA_ITEM_MS);
+          const vida = setTimeout(() => item.remove(), VIDA_ITEM_MS);
 
-      item.addEventListener('click', () => {
-        clearTimeout(vida);
-        score++;
-        scoreEl.textContent = score;
-        item.remove();
-      });
+          item.addEventListener("click", () => {
+            clearTimeout(vida);
+            score++;
+            scoreEl.textContent = score;
+            item.remove();
+          });
 
-      area.appendChild(item);
-    }
+          area.appendChild(item);
+        }
 
-    btn.addEventListener('click', () => {
-      if (activo) return;
-      activo = true;
-      score = 0;
-      scoreEl.textContent = '0';
-      msg.textContent = '';
-      area.innerHTML = '';
-      btn.textContent = 'jugando…';
-      btn.disabled = true;
+        btn.addEventListener("click", () => {
+          if (activo) return;
+          activo = true;
+          score = 0;
+          scoreEl.textContent = "0";
+          msg.textContent = "";
+          area.innerHTML = "";
+          btn.textContent = "jugando…";
+          btn.disabled = true;
 
-      spawnTimer = setInterval(spawn, APARICION_MS);
-      spawn();
+          spawnTimer = setInterval(spawn, APARICION_MS);
+          spawn();
 
-      endTimer = setTimeout(() => {
-        activo = false;
-        clearInterval(spawnTimer);
-        area.innerHTML = '';
-        btn.textContent = 'jugar de nuevo';
-        btn.disabled = false;
-        msg.textContent = `Atrapaste ${score} ${score === 1 ? 'corazón / sol' : 'soles y corazones'}.`;
-      }, DURACION_MS);
-    });
-  })();
-</script>
-
-</body>
+          endTimer = setTimeout(() => {
+            activo = false;
+            clearInterval(spawnTimer);
+            area.innerHTML = "";
+            btn.textContent = "jugar de nuevo";
+            btn.disabled = false;
+            msg.textContent = `Atrapaste ${score} ${score === 1 ? "corazón / sol" : "soles y corazones"}.`;
+          }, DURACION_MS);
+        });
+      })();
+    </script>
+  </body>
 </html>

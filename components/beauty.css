@@ -85,19 +85,21 @@ body {
 
 .personaje-img {
   position: absolute;
-  filter: drop-shadow(0 0 24px rgba(233, 30, 140, 0.25));
-  opacity: 0.95;
+  filter: drop-shadow(0 0 40px rgba(233, 30, 140, 0.55))
+    drop-shadow(0 0 12px rgba(176, 18, 63, 0.4)) brightness(0.9) sepia(0.15)
+    hue-rotate(320deg);
+  opacity: 0.82;
 }
 .p1 {
-  bottom: -10px;
-  left: -30px;
-  width: 260px;
+  bottom: 0;
+  left: 0;
+  width: clamp(200px, 28vw, 360px);
   animation: flotar-a 10s ease-in-out infinite;
 }
 .p2 {
-  bottom: -20px;
-  right: -30px;
-  width: 300px;
+  bottom: 0;
+  right: 0;
+  width: clamp(200px, 28vw, 360px);
   animation: flotar-b 12s ease-in-out infinite 1.2s;
 }
 
@@ -143,7 +145,7 @@ body {
 .music-player {
   position: fixed;
   top: 1.2rem;
-  right: 1.3rem;
+  right: 3rem;
   z-index: 500;
   display: flex;
   align-items: center;
@@ -1342,5 +1344,18 @@ body {
   }
   .contador-unidad {
     min-width: 50px;
+  }
+
+  .p1,
+  .p2 {
+    opacity: 0.6;
+  }
+  .p1 {
+    left: 0;
+    width: clamp(130px, 38vw, 200px);
+  }
+  .p2 {
+    right: 0;
+    width: clamp(130px, 38vw, 200px);
   }
 }
