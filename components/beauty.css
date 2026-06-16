@@ -1132,7 +1132,7 @@ body {
 }
 .camino-detalle-texto {
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: 1.2;
   color: rgba(243, 230, 236, 0.85);
   font-style: italic;
 }
