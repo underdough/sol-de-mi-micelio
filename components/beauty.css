@@ -91,7 +91,7 @@ body {
   opacity: 0.82;
 }
 .p1 {
-  bottom: 0;
+  top: 0;
   left: 0;
   width: clamp(200px, 28vw, 360px);
   animation: flotar-a 10s ease-in-out infinite;
